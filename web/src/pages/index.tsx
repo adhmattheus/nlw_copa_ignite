@@ -1,6 +1,4 @@
-// interface HomeProps {
-//   count: number
-// }
+
 import Image from 'next/image'
 import appPreviewImg from '../assets/app-nlw.png'
 import logoImg from '../assets/logo.svg'
@@ -10,39 +8,52 @@ import iconCheckImg from '../assets/icon.svg'
 export default function Home() {
 
   return (
-    <div>
+    <div className='mt-10 max-w-[1024px] mx-auto grid grid-cols-2 gap-28 items-center'>
       <main>
         <Image src={logoImg} alt="logo nlw copa" />
 
-        <h1>Crie seu próprio bolão da copa e compartilhe entre amigos</h1>
+        <h1 className='mt-8 text-white text-5xl font-bold leading-tight'>
+          Crie seu próprio bolão da copa e compartilhe entre amigos!
+        </h1>
 
-        <div>
+        <div className='mt-8 flex items-center gap-2 '>
           <Image src={usersAvatar} alt="imagem dos usuarios" />
-          <strong>
-            <span>+12.592</span> pessoas já usando
+          <strong className='text-gray-100 text-xl'>
+            <span className='text-ignite-500'>+12.592</span> pessoas já usando
           </strong>
         </div>
 
-        <form>
-          <input type="text" required placeholder='Qual nome do seu bolão?' />
-          <button type='submit'> criar meu bolão</button>
-
-          <p>Após criar seu bolão, você receberá um código único que poderá usar para convidar outras pessoas 🚀</p>
+        <form className='mt-8 flex gap-2'>
+          <input className='flex-1 px-6 py-4 rounded bg-gray-800 border border-gray-600 text-sm'
+            type="text"
+            required
+            placeholder='Qual nome do seu bolão?'
+          />
+          <button className='bg-yellow-500 px-6 py-4 rounded text-gray-900 font-bold text-sm uppercase hover:bg-yellow-700'
+            type='submit'
+          >
+            criar meu bolão
+          </button>
         </form>
 
-        <div>
-          <div>
+        <p className='mt-4 text-sm text-gray-300 leading-relaxed'>
+          Após criar seu bolão, você receberá um código único que poderá usar para convidar outras pessoas 🚀</p>
+
+        <div className='mt-6 pt-6 border-t border-gray-600 flex intem-center justify-between text-gray-100'>
+          <div className='flex items-center gap-6'>
             <Image src={iconCheckImg} alt=' ' />
-            <div>
-              <span>+2.834</span>
+            <div className='flex flex-col'>
+              <span className='font-bold text-2xl'>+2.834</span>
               <span>Bolões criados </span>
             </div>
           </div>
 
-          <div>
+          <div className='w-px h-14 bg-gray-600' />
+
+          <div className='flex items-center gap-6'>
             <Image src={iconCheckImg} alt=' ' />
-            <div>
-              <span>+2.834</span>
+            <div className='flex flex-col'>
+              <span className='font-bold text-2xl'>+2.834</span>
               <span>Bolões criados </span>
             </div>
           </div>
@@ -53,16 +64,3 @@ export default function Home() {
     </div>
   )
 }
-
-// export const getServerSideProps = async () => {
-//   const response = await fetch('http://localhost:3333/pools/count');
-//   const data = await response.json()
-
-//   console.log(data);
-
-//   return {
-//     props: {
-//       count: data.count,
-//     }
-//   }
-// }
