@@ -8,7 +8,7 @@ import iconCheckImg from '../assets/icon.svg'
 export default function Home() {
 
   return (
-    <div className='mt-10 max-w-[1024px] mx-auto grid grid-cols-2 gap-28 items-center'>
+    <div className='max-w-[1024px] h-screen mx-auto grid grid-cols-2 gap-28 items-center'>
       <main>
         <Image src={logoImg} alt="logo nlw copa" />
 
@@ -54,7 +54,7 @@ export default function Home() {
             <Image src={iconCheckImg} alt=' ' />
             <div className='flex flex-col'>
               <span className='font-bold text-2xl'>+2.834</span>
-              <span>Bolões criados </span>
+              <span>Palpites enviados</span>
             </div>
           </div>
         </div>
