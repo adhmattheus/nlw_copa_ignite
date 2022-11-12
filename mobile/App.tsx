@@ -4,6 +4,7 @@ import { Loading } from './src/components/Loading';
 import { NativeBaseProvider, StatusBar } from "native-base";
 import { AuthContextProvider } from './src/contexts/AuthContext';
 import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { New } from './src/screens/New';
 
 
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
           translucent
         />
 
-        {fontsLoaded ? <SignIn /> : <Loading />}
+        {fontsLoaded ? <New /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider >
   );
