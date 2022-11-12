@@ -5,7 +5,7 @@ import { NativeBaseProvider, StatusBar } from "native-base";
 import { AuthContextProvider } from './src/contexts/AuthContext';
 import { useFonts, Roboto_400Regular, Roboto_500Medium, Roboto_700Bold } from '@expo-google-fonts/roboto';
 import { New } from './src/screens/New';
-import { Find } from './src/screens/FInd';
+import { Pools } from './src/screens/Pools';
 
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
           translucent
         />
 
-        {fontsLoaded ? <Find /> : <Loading />}
+        {fontsLoaded ? <Pools /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider >
   );
