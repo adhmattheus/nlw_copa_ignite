@@ -1,5 +1,5 @@
 import React, { createContext, ReactNode } from "react";
-
+import * as AuthSesson from 'expo-auth-session'
 
 interface UserProps {
   name: string;
@@ -18,6 +18,8 @@ interface AuthProviderProps {
 export const AuthContext = createContext({} as AuthContextDataProps);
 
 export function AuthContextProvider({ children }: AuthProviderProps) {
+  console.log(AuthSesson.makeRedirectUri({ useProxy: true }));
+
 
   async function signIn() {
     console.log('vamos logar');
