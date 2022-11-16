@@ -5,6 +5,7 @@ import { prisma } from "../lib/prisma"
 import { authenticate } from "../plugins/authenticate";
 
 export async function poolRoutes(fastify: FastifyInstance) {
+
   fastify.get('/pools/count', async () => {
     const count = await prisma.pool.count()
 
