@@ -5,10 +5,7 @@ import { Fontisto } from '@expo/vector-icons';
 import { useAuth } from "../hoooks/useAuth";
 
 export function SignIn() {
-  const { signIn, user } = useAuth();
-
-  console.log('dados do usuario =>', user);
-
+  const { signIn, isUserLoading } = useAuth();
 
   return (
     <Center flex={1} bgColor="gray.950" p={7}>
@@ -21,6 +18,8 @@ export function SignIn() {
         leftIcon={<Icon as={Fontisto} name={"google"} color="white" size="md" />}
         mt={12}
         onPress={signIn}
+        isLoading={isUserLoading}
+        _loading={{ _spinner: { color: 'white' } }}
       />
 
       <Text textAlign="center" color="white" mt={4}>
