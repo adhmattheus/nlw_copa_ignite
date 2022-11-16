@@ -5,6 +5,7 @@ import { New } from "../screens/New";
 import { useTheme } from "native-base";
 import colors from "native-base/lib/typescript/theme/base/colors";
 import { Platform } from "react-native";
+import { Find } from "../screens/FInd";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -50,6 +51,11 @@ export function AppRoutes() {
         }}
       />
 
+      <Screen
+        name="find"
+        component={Find}
+        options={{ tabBarButton: () => null }}
+      />
     </Navigator>
   )
 }
