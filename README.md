@@ -1,1 +1,1 @@
-# nlw_copa_ignite.
+# nlw_copa_ignit
